@@ -1,8 +1,7 @@
 # vim: filetype=sh
 alias h="cd ~/ && ls -a" \
-config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME' \
+config="/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME" \
 SP="vim ~/vimwiki/ScratchPad.md" \
-
 d="cd ~/Documents && ls -a" \
 D="cd ~/Downloads && ls -a" \
 m="cd ~/Music && ls -a" \
