@@ -4,7 +4,7 @@ alias ka="killall" \
 	mpv="mpv --input-ipc-server=/tmp/mpvsoc$(date +%s)" \
 	calcurse="calcurse -D ~/.config/calcurse" \
 	magit="nvim -c MagitOnly" \
-	dotfiles='git --git-dir=$HOME/dotfiles/ --work-tree=$HOME' \
+	dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME' \
 	p="sudo pacman" \
 	orphan="sudo pacman -Rs $(pacman -Qqtd)" \
 	mirror="sudo reflector -l 20 -f 10 --save /etc/pacman.d/mirrorlist" \

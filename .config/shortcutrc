@@ -17,7 +17,6 @@ cfz="$EDITOR ~/.zshrc" \
 cfv="$EDITOR ~/.config/nvim/init.vim" \
 cfi="$EDITOR ~/.config/i3/config" \
 cfm="$EDITOR ~/.config/mutt/muttrc" \
-cfd="$EDITOR ~/.Xdefaults" \
 cfu="$EDITOR ~/.config/newsboat/urls" \
 cfn="$EDITOR ~/.config/newsboat/config" \
 cfmb="$EDITOR ~/.config/ncmpcpp/bindings" \
