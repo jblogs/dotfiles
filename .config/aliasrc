@@ -4,7 +4,10 @@ alias ka="killall" \
 	mpv="mpv --input-ipc-server=/tmp/mpvsoc$(date +%s)" \
 	calcurse="calcurse -D ~/.config/calcurse" \
 	magit="nvim -c MagitOnly" \
+	dotfiles='git --git-dir=$HOME/dotfiles/ --work-tree=$HOME' \
 	p="sudo pacman" \
+	orphan="sudo pacman -Rs $(pacman -Qqtd)" \
+	mirror="sudo reflector -l 20 -f 10 --save /etc/pacman.d/mirrorlist" \
 	SS="sudo systemctl" \
 	f="$FILE" \
 	g="git" \
@@ -21,9 +24,9 @@ alias ka="killall" \
 	yt="youtube-dl --add-metadata -i -o '%(upload_date)s-%(title)s.%(ext)s'" \
 	yta="yt -x -f bestaudio/best" \
 	ref="shortcuts >/dev/null; source ~/.config/shortcutrc" \
-	upc="sudo pacman -Syu; pkill -RTMIN+8 i3blocks" \
 	lsp="pacman -Qett --color=always | less" \
-	ffmpeg="ffmpeg -hide_banner"
+	ffmpeg="ffmpeg -hide_banner" \
+	web="sudo systemctl start httpd && sudo systemctl start mysqld"
 
 command -v nvim >/dev/null && alias vim="nvim" vimdiff="nvim -d" # Use neovim for vim if present.
 

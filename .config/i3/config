@@ -133,16 +133,16 @@ bindsym $mod+slash		split vertical ;; exec $term
 bindsym $mod+Shift+slash	kill
 bindsym $mod+backslash		workspace back_and_forth
 
-set $workspace1 "1. Terminal"
-set $workspace2 "2. Internet"
-set $workspace3 "3. Web Dev"
-set $workspace4 "4. Info"
-set $workspace5 "5. Gimp"
+set $workspace1 "1.Terminal"
+set $workspace2 "2.Internet"
+set $workspace3 "3.Web Dev"
+set $workspace4 "4.Info"
+set $workspace5 "5.Gimp"
 set $workspace6 "6"
 set $workspace7 "7"
-set $workspace8 "8 Music"
-set $workspace9 "9. Stream"
-set $workspace10 "10. Chat"
+set $workspace8 "8.Music"
+set $workspace9 "9.Stream"
+set $workspace10 "10.Chat"
 
 # switch to workspace
 bindsym $mod+1 	workspace $workspace1
