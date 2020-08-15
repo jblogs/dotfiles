@@ -1,33 +1,71 @@
-#!/usr/bin/env sh
-alias ka="killall" \
-	mkd="mkdir -pv" \
-	mpv="mpv --input-ipc-server=/tmp/mpvsoc$(date +%s)" \
-	calcurse="calcurse -D ~/.config/calcurse" \
-	magit="nvim -c MagitOnly" \
-	dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME' \
-	p="sudo pacman" \
-	orphan="sudo pacman -Rs $(pacman -Qqtd)" \
-	mirror="sudo reflector -l 20 -f 10 --save /etc/pacman.d/mirrorlist" \
-	SS="sudo systemctl" \
-	f="$FILE" \
-	g="git" \
-	trem="transmission-remote" \
-	e="$EDITOR" \
-	v="$EDITOR" \
-	x="sxiv -ft *" \
-	sdn="sudo shutdown -h now" \
-	gua="git remote | xargs -L1 git push --all" \
-	ls="ls -hN --color=auto --group-directories-first" \
+#!/bin/sh
+
+# Use neovim for vim if present.
+command -v nvim >/dev/null && alias vim="nvim" vimdiff="nvim -d"
+
+# Verbosity and settings that you pretty much just always are going to want.
+alias \
+	cp="cp -iv" \
+	mv="mv -iv" \
+	rm="rm -iv" \
+        mkd="mkdir -pv" \
+	yt="youtube-dl --add-metadata -i" \
+	yta="yt -x -f bestaudio/best" \
+	ffmpeg="ffmpeg -hide_banner"
+
+# Colorize commands when possible.
+# ls="ls -hN --color=auto --group-directories-first" \
+alias \
 	grep="grep --color=auto" \
 	diff="diff --color=auto" \
-	ccat="highlight --out-format=ansi" \
-	yt="youtube-dl --add-metadata -i -o '%(upload_date)s-%(title)s.%(ext)s'" \
-	yta="yt -x -f bestaudio/best" \
-	ref="shortcuts >/dev/null; source ~/.config/shortcutrc" \
+	ccat="highlight --out-format=ansi"
+
+# alias bc="BC_ENV_ARGS=<(echo "scale=4") \bc"
+# Changing "ls" to "exa"
+alias ls="exa -al --color=always --group-directories-first"
+alias la="exa -a --color=always --group-directories-first"
+alias ll="exa -l --color=always --group-directories-first"
+alias lt="exa -aT --color=always --group-directories-first"
+
+# These common commands are just too long! Abbreviate them.
+alias \
+	ka="killall" \
+	g="git" \
+	gcal="gcalcli" \
+	mutt="neomutt" \
+	sdn="sudo shutdown -h now" \
+	f="$FILE" \
+	e="$EDITOR" \
+	v="$EDITOR" \
+	p="sudo pacman" \
+	r="ranger" \
+	orphan="sudo pacman -Rs $(pacman -Qqtd)" \
 	lsp="pacman -Qett --color=always | less" \
-	ffmpeg="ffmpeg -hide_banner" \
+	SS="sudo systemctl" \
+	ix="curl -F 'f:1=<-' ix.io" \
+	x="sxiv -ft *" \
+        bc="bc -lq" 
+
+# This alias is important. It enables the `pauseallmpv` command.
+alias mpv="mpv --input-ipc-server=/tmp/mpvsoc$(date +%s)"
+
+# Some other stuff
+alias \
+	dotfiles="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME" \
+	mirror="sudo reflector -l 20 -f 10 --save /etc/pacman.d/mirrorlist" \
 	web="sudo systemctl start httpd && sudo systemctl start mysqld"
+	ref="shortcuts >/dev/null; source ~/.config/shortcutrc" \
+	weath="less -S ~/.local/share/weatherreport"
 
-command -v nvim >/dev/null && alias vim="nvim" vimdiff="nvim -d" # Use neovim for vim if present.
+	se () { du -a ~/.local/bin/* ~/.config/* | awk '{print $2}' | fzf | xargs -r $EDITOR ;}
+	vf() { fzf | xargs -r -I % $EDITOR % ;}
+	vm() { fzf | xargs -r -I % $VIDEO % ;}
+	pf() { cd $HOME/.local/share/password-store && fzf | xargs -r -I % pass % ;}
+	VF() { cd $HOME/vimwiki && fzf --border --preview='bat --theme="Solarized (dark)" --style=numbers --color=always {} | head -500' | xargs -r -I % $EDITOR % ;}
+	mm() { cd $HOME/Videos && fzf | xargs -r -I % $VIDEO % ;}
+	mf() { cd $HOME/Music && fzf | xargs -r -I % $VIDEO % ;}
+	vff() { fzf --multi --border --preview='bat --theme="Solarized (dark)" --style=numbers --color=always {} | head -500' --marker="~" | xargs -r -I % $EDITOR % ;}
 
-vf() { fzf | xargs -r -I % $EDITOR % ;}
+pacs() {
+    sudo pacman -Syy $(pacman -Ssq | fzf -m --preview="pacman -Si {}" --preview-window=:hidden --bind=space:toggle-preview) 
+}

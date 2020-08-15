@@ -1,8 +1,7 @@
+
 # Basic binds
 super + Return
 	$TERMINAL
-super + c
-	code
 super + d
 	dmenu_run
 super + r
@@ -11,20 +10,16 @@ super + e
 	$TERMINAL -e neomutt
 super + m
 	$TERMINAL -e ncmpcpp
+super + shift + m
+	$TERMINAL -e mega-cmd
 super + n
 	$TERMINAL -e newsboat
 super + v
 	$TERMINAL -e $EDITOR -c "VimwikiIndex"
-super + shift + y
-	$TERMINAL -e calcurse -D ~/.config/calcurse
-super + shift + a
-	$TERMINAL -e pulsemixer; pkill -RTMIN+10 i3blocks
-super + shift + c
-	camtoggle
 super + shift + e
 	tutorialvids
 super + shift + w
-	chromium https://bbc.co.uk/news
+	chromium 
 super + w
 	$BROWSER
 super + shift + g
