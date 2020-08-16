@@ -11,6 +11,7 @@ export BROWSER="brave"
 export READER="zathura"
 export FILE="ranger"
 export VIDEO="mpv"
+export COLORTERM="truecolor"
 
 # ~/ Clean-up:
 export NOTMUCH_CONFIG="$HOME/.config/notmuch-config"
