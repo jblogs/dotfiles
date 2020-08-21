@@ -10,6 +10,7 @@ s="cd ~/suckless && la" \
 t="cd ~/temp && ls" \
 vv="cd ~/Videos && la" \
 vd="cd ~/Videos/Documentry && la" \
+vm="cd ~/Videos/Movies && la" \
 vyt="cd ~/Videos/Youtube && la" \
 vu="cd ~/Videos/Ultimo && la" \
 cf="cd ~/.config && la" \

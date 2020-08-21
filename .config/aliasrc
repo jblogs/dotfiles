@@ -68,7 +68,6 @@ alias \
 
 	se () { du -a ~/.local/bin/* ~/.config/* | awk '{print $2}' | fzf | xargs -r $EDITOR ;}
 	vf() { fzf | xargs -r -I % $EDITOR % ;}
-	vm() { fzf | xargs -r -I % $VIDEO % ;}
 	pf() { cd $HOME/.local/share/password-store && fzf | xargs -r -I % pass % ;}
 	VF() { cd $HOME/vimwiki && fzf --border --preview='bat --theme="Solarized (dark)" --style=numbers --color=always {} | head -500' | xargs -r -I % $EDITOR % ;}
 	mm() { cd $HOME/Videos && fzf | xargs -r -I % $VIDEO % ;}
