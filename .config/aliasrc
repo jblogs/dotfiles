@@ -40,6 +40,7 @@ alias \
 	ka="killall" \
 	g="git" \
 	gcal="gcalcli" \
+	mp="ncmpcpp" \
 	mutt="neomutt" \
 	news="newsboat" \
 	sdn="sudo shutdown -h now" \
@@ -71,7 +72,6 @@ alias \
 	pf() { cd $HOME/.local/share/password-store && fzf | xargs -r -I % pass % ;}
 	VF() { cd $HOME/vimwiki && fzf --border --preview='bat --theme="Solarized (dark)" --style=numbers --color=always {} | head -500' | xargs -r -I % $EDITOR % ;}
 	mm() { cd $HOME/Videos && fzf | xargs -r -I % $VIDEO % ;}
-	mf() { cd $HOME/Music && fzf | xargs -r -I % $VIDEO % ;}
 	vff() { fzf --multi --border --preview='bat --theme="Solarized (dark)" --style=numbers --color=always {} | head -500' --marker="~" | xargs -r -I % $EDITOR % ;}
 
 pacs() {
