@@ -42,7 +42,7 @@ alias \
 	gcal="gcalcli" \
 	mp="ncmpcpp" \
 	mutt="neomutt" \
-	news="newsboat" \
+	nb="newsboat" \
 	sdn="sudo shutdown -h now" \
 	f="$FILE" \
 	e="$EDITOR" \

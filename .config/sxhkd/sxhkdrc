@@ -1,6 +1,34 @@
-
+#----------------------------------------------------------------#
+# Keys used in DWM:
+/* 	modifier key        function    argument */
+/*  Super +	Return,			spawn,      {.v = termcmd } }, */
+/* 	Super + q,					killclient,	{0} }, */
+/* 	Super + j,					focusstack,	{.i = +1 } }, */
+/* 	Super + k,					focusstack,	{.i = -1 } }, */
+/* 	Super + Shift + j,	movestack,	{.i = +1 } }, */
+/* 	Super + Shift + k,	movestack,	{.i = -1 } }, */
+/* 	Super + space,			zoom,				{0} }, */
+/* 	Super + h,					setmfact,		{.f = -0.05} }, */
+/* 	Super + l,					setmfact,		{.f = +0.05} }, */
+/* 	Super + b,					togglebar,	{0} }, */
+/* 	Super + t,					setlayout,	{.v = tile[0]} }, */
+/* 	Super + f,					setlayout,	{.v = monocle[1]} }, */
+/* 	Super + y,					setlayout,	{.v = spiral[2]} }, */
+/* 	Super + u,					setlayout,	{.v = centeredmaster[3]} }, */
+/* 	Super + i,					setlayout,	{.v = NULL[4]} }, */
+/* 	Super + o,					setlayout,	{.v = centeredfloatingmaster[5]} }, */
+/* 	Super + Tab,				view,				{0} }, */
+/* 	Super + backslash,	view,				{0} }, */
+/* 	Super + 0,					view,				{.ui = ~0 } }, */
+/* 	Super + Shift + 0,	tag,				{.ui = ~0 } }, */
+/* 	Super + Shift + F2,	quit,				{0} }, */
+/* 	Super + g,					shiftview,	{ .i = -1 } }, */
+/* 	Super + semicolon,	shiftview,	{ .i = 1 } }, */
+/* 	Super + Page_Up,		shiftview,	{ .i = -1 } }, */
+/* 	Super + Page_Down,	shiftview,	{ .i = 1 } }, */
+#----------------------------------------------------------------#
 # Basic binds
-super + Return
+super + shift + Return
 	$TERMINAL
 super + d
 	dmenu_run
@@ -16,8 +44,6 @@ super + n
 	$TERMINAL -e newsboat
 super + v
 	$TERMINAL -e $EDITOR -c "VimwikiIndex"
-super + shift + e
-	tutorialvids
 super + shift + w
 	chromium 
 super + w
@@ -69,74 +95,84 @@ XF86MonBrightnessDown
 XF86MonBrightnessUp
 	xbacklight -inc 15
 
-
-# Recording
-# Take screenshot
-Print
-	maim pic-full-$(date '+%y%m%d-%H%M-%S').png
-# Pick screenshot type
-shift + Print
-	maimpick
-# Record audio or video
-super + Print
-	dmenurecord
-# kill active recording
-super + Delete
-	dmenurecord kill
-
 # Pause audio
-super + {_,shift +} p
-	lmc {toggle,pause}
+super + p
+	mpc toggle
+super + shift + p
+	mpc pause; pauseallmpv
 # Changes to next/previous tracks
 super + {comma,period}
-	lmc {prev,next}
+	mpc {prev,next}
 # Restart track
 super + shift + less
-	lmc replay
+	mpc seek 0%
+# Seek foward in song
+super + {_,shift +} bracketright
+	mpc seek +{10,120}
+# Seek backward in song
+super + {_,shift +} bracketleft
+	mpc seek -{10,120}
+/* # Increase volume */
+/* super + {equal,plus} */
+/* 	amixer sset Master {5,15}%+; pkill -RTMIN+10 blocks */
+/* # Decrease volume */
+/* super {_,shift +} + minus */
+/* 	amixer sset Master {5,15}%-; pkill -RTMIN+10 blocks */
+/* super + shift + m */
+/* 	amixer sset Master toggle; pkill -RTMIN+10 blocks */
+
+# Audiokeys
+XF86AudioMute
+	amixer sset Master toggle; pkill -RTMIN+10 blocks
+XF86Audio{Raise,Lower}Volume
+	amixer sset Master 5%{+,-}; pkill -RTMIN+10 blocks
+XF86Audio{Next,Prev}
+	mpc {next,prev}
+XF86Audio{Pause,Play,Stop}
+	mpc {pause,play,stop}
+XF86Audio{Rewind,Forward}
+	mpc seek {-,+}10
+XF86AudioRecord
+	dmenurecord
+XF86AudioMedia
+	$TERMINAL -e ncmpcpp
+
 # Increase volume
 super + {equal,plus}
 	lmc up {5,15}
 # Decrease volume
 super {_,shift +} + minus
 	lmc down {5,15}
-# Seek foward in song
-super + {_,shift +} bracketright
-	lmc forward {10,120}
-# Seek backward in song
-super + {_,shift +} bracketleft
-	lmc back {10,120}
 
 # Function keys
+#----------------------------------------------------------------#
+# First bank F1 - F4
 # Show readme
-super + F1
+super + shift + F1
 	groff -mom $HOME/.local/share/larbs/readme.mom -Tpdf | zathura -
-# F2 is restart in i3 right now.
-# Change display
+# Shutdown Computer
+super + F2
+	prompt "Shutdown computer?" "sudo -A shutdown -h now"
+# Reboot Cmputer
 super + F3
+	prompt "Reboot computer?" "sudo -A reboot"
+# Change display
+super + shift + F3
 	displayselect
 # Hibernate
 super + F4
 	prompt 'Hibernate computer?' 'sudo systemctl suspend'
-# Restart/rescan wifi/eth networks
-super + F5
-	sudo -A systemctl restart NetworkManager
-# Start torrent daemon/open interface
-super + F6
-	torwrap
-# toggle torrent daemon
-super + F7
-	td-toggle
-# sync email
-# super + F8
-	 #mailsync
+#----------------------------------------------------------------#
+# Second bank F5 - F8 Torrent Settings
+# Start VPN, Start Torrent/Open Interface, Toggle Torrent Daemon  
+super + {F5,F6,F7,F8}
+	{$TERMINAL -e nord-toggle,torwrap,td-toggle,nord-status}
+#----------------------------------------------------------------#
+# Third bank F9 - F12
 # Mount a USB drive or Android device
 super + {F9,F10}
 	{dmenumount,dmenuumount}
 # Search with Duckduckgo
 super + F11
-	ducksearch
-# Network Manager interface
-# super + F12
-	# $TERMINAL -e sudo -A nmtui
-
+	$TERMINAL -e w3m duckduckgo.com
 

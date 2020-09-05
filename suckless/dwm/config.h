@@ -57,9 +57,6 @@ static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
 	{ "Brave-browser",  NULL,       NULL,       1 << 1,	    0,           -1 },
-	{ "alacritty", "weechat",        NULL,       1 << 1,       0,           -1 },
-	{ "MEGAsync", NULL,       NULL, 	1 << 8,     0,           -1 },
-
 
 };
 
@@ -95,27 +92,19 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
-static const char *tmuxcmd[]  = { "alacritty", "-e", "tmux", NULL };
-static const char *irccmd[]   = { "alacritty", "-name", "weechat", "-e", "weechat", NULL };
-static const char *megasync[] = { "megasync", NULL };
 
 #include "movestack.c"
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,    		        XK_Return, spawn,          {.v = termcmd } },
-	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = tmuxcmd } },
-	{ MODKEY,                       XK_c,      spawn,          {.v = irccmd } },
-	{ MODKEY|ShiftMask,             XK_m,	   spawn,	   {.v = megasync } },
-	{ MODKEY,			XK_q,		killclient,	{0} },
+	{ MODKEY,    		   					    XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY,												XK_q,		killclient,	{0} },
 	{ MODKEY,                       XK_j,		focusstack,	{.i = +1 } },
 	{ MODKEY,                       XK_k,		focusstack,	{.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_j,		movestack,	{.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_k,		movestack,	{.i = -1 } },
-	{ MODKEY,			XK_space,	zoom,		{0} },
+	{ MODKEY,												XK_space,	zoom,		{0} },
 	{ MODKEY,                       XK_h,		setmfact,	{.f = -0.05} },
 	{ MODKEY,                       XK_l,		setmfact,	{.f = +0.05} },
-	{ MODKEY|ShiftMask,		XK_i,		incnmaster,	{.i = +1 } },
-	{ MODKEY|ShiftMask,		XK_o,		incnmaster,	{.i = -1 } },
 	{ MODKEY,			XK_b,		togglebar,	{0} },
 	{ MODKEY,			XK_t,		setlayout,	{.v = &layouts[0]} },
 	{ MODKEY,			XK_f,		setlayout,	{.v = &layouts[1]} },
@@ -137,7 +126,7 @@ static Key keys[] = {
 	TAGKEYS(			XK_9,			8)
 	{ MODKEY,                       XK_0,		view,		{.ui = ~0 } },
 	{ MODKEY|ShiftMask,		XK_0,		tag,		{.ui = ~0 } },
-	{ MODKEY,			XK_F2,		quit,		{0} },
+	{ MODKEY|ShiftMask,		XK_F2,		quit,		{0} },
 	{ MODKEY,			XK_g,		shiftview,	{ .i = -1 } },
 	{ MODKEY,			XK_semicolon,	shiftview,	{ .i = 1 } },
 	{ MODKEY,			XK_Page_Up,	shiftview,	{ .i = -1 } },
