@@ -28,7 +28,7 @@ alias ll="exa -l --color=always --group-directories-first"
 alias lt="exa -aT --color=always --group-directories-first"
 
 # navigation
-alias ..='cd ..' 
+alias ..='cd ..'
 alias ...='cd ../..'
 alias .3='cd ../../..'
 alias .4='cd ../../..'
@@ -39,7 +39,7 @@ alias .6='cd ../../../../..'
 alias \
 	ka="killall" \
 	g="git" \
-	gcal="gcalcli" \
+	gcal="gcalcli --config-folder ~/.config/gcalcli" \
 	mp="ncmpcpp" \
 	mutt="neomutt" \
 	nb="newsboat" \
@@ -54,18 +54,22 @@ alias \
 	SS="sudo systemctl" \
 	ix="curl -F 'f:1=<-' ix.io" \
 	x="sxiv -ft *" \
-        bc="bc -lq" 
+        bc="bc -lq"
 
 # This alias is important. It enables the `pauseallmpv` command.
-alias mpv="mpv --input-ipc-server=/tmp/mpvsoc$(date +%s)"
+# alias mpv="mpv --input-ipc-server=/tmp/mpvsoc$(date +%s)"
 
 # Some other stuff
 alias \
 	dotfiles="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME" \
 	mirror="sudo reflector -l 20 -f 10 --save /etc/pacman.d/mirrorlist" \
-	web="sudo systemctl start httpd && sudo systemctl start mysqld"
-	ref="shortcuts >/dev/null; source ~/.config/shortcutrc" \
-	weath="less -S ~/.local/share/weatherreport"
+	web="sudo systemctl start httpd && sudo systemctl start mysqld" \
+	magit="nvim -c MagitOnly" \
+	ref="shortcuts >/dev/null; source ${XDG_CONFIG_HOME:-$HOME/.config}/shortcutrc ; source ${XDG_CONFIG_HOME:-$HOME/.config}/zshnameddirrc" \
+	weath="less -S ${XDG_DATA_HOME:-$HOME/.local/share}/weatherreport" \
+	tmux="tmux -f ${XDG_CONFIG_HOME:-$HOME/.config}/tmux/tmux.conf" \
+	weath="less -S ${XDG_DATA_HOME:-$HOME/.local/share}/weatherreport" \
+	tmux="tmux -f ${XDG_CONFIG_HOME:-$HOME/.config}/tmux/tmux.conf"
 
 	se () { du -a ~/.local/bin/* ~/.config/* | awk '{print $2}' | fzf | xargs -r $EDITOR ;}
 	vf() { fzf | xargs -r -I % $EDITOR % ;}
@@ -75,5 +79,5 @@ alias \
 	vff() { fzf --multi --border --preview='bat --theme="Solarized (dark)" --style=numbers --color=always {} | head -500' --marker="~" | xargs -r -I % $EDITOR % ;}
 
 pacs() {
-    sudo pacman -Syy $(pacman -Ssq | fzf -m --preview="pacman -Si {}" --preview-window=:hidden --bind=space:toggle-preview) 
+    sudo pacman -Syy $(pacman -Ssq | fzf -m --preview="pacman -Si {}" --preview-window=:hidden --bind=space:toggle-preview)
 }

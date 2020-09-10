@@ -1,5 +1,3 @@
-# Luke's lf settings
-
 # Basic vars
 set shell bash
 set shellopts '-eu'
@@ -8,6 +6,7 @@ set scrolloff 10
 set color256
 set icons
 set period 1
+set hidden off
 set hiddenfiles ".*:*.aux:*.log:*.bbl:*.bcf:*.blg:*.run.xml"
 
 # Vars that depend on environmental variables
@@ -69,6 +68,7 @@ map J $lf -remote "send $id cd $(cut -d'	' -f2 ${XDG_CONFIG_HOME:-$HOME/.config}
 map gh
 map g top
 map D delete
+map <delete> delete
 map C copyto
 map M moveto
 map <c-n> push :mkdir<space>
@@ -90,5 +90,3 @@ map b $setbg $f
 map <c-e> down
 map <c-y> up
 map V push :!nvim<space>
-
-
