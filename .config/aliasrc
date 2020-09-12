@@ -49,6 +49,7 @@ alias \
 	v="$EDITOR" \
 	p="sudo pacman" \
 	r="ranger" \
+	l="lf" \
 	orphan="sudo pacman -Rs $(pacman -Qqtd)" \
 	lsp="pacman -Qett --color=always | less" \
 	SS="sudo systemctl" \
@@ -57,7 +58,7 @@ alias \
         bc="bc -lq"
 
 # This alias is important. It enables the `pauseallmpv` command.
-# alias mpv="mpv --input-ipc-server=/tmp/mpvsoc$(date +%s)"
+alias mpv="mpv --input-ipc-server=/tmp/mpvsoc$(date +%s)"
 
 # Some other stuff
 alias \
@@ -67,7 +68,6 @@ alias \
 	magit="nvim -c MagitOnly" \
 	ref="shortcuts >/dev/null; source ${XDG_CONFIG_HOME:-$HOME/.config}/shortcutrc ; source ${XDG_CONFIG_HOME:-$HOME/.config}/zshnameddirrc" \
 	weath="less -S ${XDG_DATA_HOME:-$HOME/.local/share}/weatherreport" \
-	tmux="tmux -f ${XDG_CONFIG_HOME:-$HOME/.config}/tmux/tmux.conf" \
 	weath="less -S ${XDG_DATA_HOME:-$HOME/.local/share}/weatherreport" \
 	tmux="tmux -f ${XDG_CONFIG_HOME:-$HOME/.config}/tmux/tmux.conf"
 
