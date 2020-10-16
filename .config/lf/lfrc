@@ -28,15 +28,6 @@ cmd open ${{
 
 cmd mkdir $mkdir -p "$(echo $* | tr ' ' '\ ')"
 
-cmd delete ${{
-	clear; tput cup $(($(tput lines)/3)); tput bold
-	set -f
-	printf "%s\n\t" "$fx"
-	printf "delete?[y/N]"
-	read ans
-	[ $ans = "y" ] && rm -rf $fx
-}}
-
 cmd moveto ${{
 	clear; tput cup $(($(tput lines)/3)); tput bold
 	set -f
@@ -64,11 +55,10 @@ cmd bulkrename $vidir
 
 # Bindings
 map <c-f> $lf -remote "send $id select '$(fzf)'"
-map J $lf -remote "send $id cd $(cut -d'	' -f2 ${XDG_CONFIG_HOME:-$HOME/.config}/directories | fzf)"
-map gh
 map g top
 map D delete
 map <delete> delete
+map P delete
 map C copyto
 map M moveto
 map <c-n> push :mkdir<space>
@@ -89,3 +79,5 @@ map b $setbg $f
 map <c-e> down
 map <c-y> up
 map V push :!nvim<space>
+
+
