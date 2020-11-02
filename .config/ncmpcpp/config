@@ -30,3 +30,30 @@ progressbar_color = black:b
 progressbar_elapsed_color = blue:b
 statusbar_color = red
 statusbar_time_color = cyan:b
+
+## Other ##
+system_encoding = "utf-8"
+regular_expressions = "extended"
+
+## Selected tracks ##
+selected_item_prefix = "* "
+discard_colors_if_item_is_selected = "no"
+
+## Seeking ##
+incremental_seeking = "yes"
+seek_time = "1"
+
+## Visibility ##
+header_visibility = "yes"
+statusbar_visibility = "yes"
+titles_visibility = "yes"
+
+## Now Playing ##
+now_playing_prefix = "> "
+centered_cursor = "yes"
+
+# Misc
+display_bitrate = "yes"
+enable_window_title = "yes"
+empty_tag_marker = ""
+

@@ -1,9 +1,7 @@
 sw_volume: 40
 audio_device_state:1:pulse
 audio_device_state:1:Visualizer feed
-state: play
-current: 11
-time: 38.702000
+state: stop
 random: 1
 repeat: 0
 single: 0
@@ -12,44 +10,4 @@ crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-0:David Gray - White Ladder/02. David Gray -  Babylon.flac
-1:Joe Walsh - Analog Man [Deluxe Version] (2012)/01 Analog Man.mp3
-2:Leonard Cohen - You Want It Darker/01-You Want It Darker.flac
-3:Leonard Cohen - You Want It Darker/02-Treaty.flac
-4:Leonard Cohen - You Want It Darker/03-On the Level.flac
-5:Leonard Cohen - You Want It Darker/04-Leaving the Table.flac
-6:Leonard Cohen - You Want It Darker/05-If I Didn't Have Your Love.flac
-7:Leonard Cohen - You Want It Darker/06-Traveling Light.flac
-8:Leonard Cohen - You Want It Darker/07-It Seemed the Better Way.flac
-9:Leonard Cohen - You Want It Darker/08-Steer Your Way.flac
-10:Leonard Cohen - You Want It Darker/09-String Reprise - Treaty.flac
-11:London Grammar - If You Wait [2013] [FLAC]/01 - Hey Now.flac
-12:London Grammar - If You Wait [2013] [FLAC]/02 - Stay Awake.flac
-13:London Grammar - If You Wait [2013] [FLAC]/03 - Shyer.flac
-14:London Grammar - If You Wait [2013] [FLAC]/04 - Wasting My Young Years.flac
-15:London Grammar - If You Wait [2013] [FLAC]/05 - Sights.flac
-16:London Grammar - If You Wait [2013] [FLAC]/06 - Strong.flac
-17:London Grammar - If You Wait [2013] [FLAC]/07 - Nightcall.flac
-18:London Grammar - If You Wait [2013] [FLAC]/08 - Metal & Dust.flac
-19:London Grammar - If You Wait [2013] [FLAC]/09 - Interlude (Live).flac
-20:London Grammar - If You Wait [2013] [FLAC]/10 - Flickers.flac
-21:London Grammar - If You Wait [2013] [FLAC]/11 - If You Wait.flac
-22:London Grammar - Truth Is A Beautiful Thing 2CD-FLAC-2017/London_Grammar-Truth_Is_A_Beautiful_Thing-Deluxe_Edition-2CD-FLAC-2017-RiBS/101-london_grammar-rooting_for_you.flac
-23:London Grammar - Truth Is A Beautiful Thing 2CD-FLAC-2017/London_Grammar-Truth_Is_A_Beautiful_Thing-Deluxe_Edition-2CD-FLAC-2017-RiBS/201-london_grammar-what_a_day.flac
-24:London Grammar - Truth Is A Beautiful Thing 2CD-FLAC-2017/London_Grammar-Truth_Is_A_Beautiful_Thing-Deluxe_Edition-2CD-FLAC-2017-RiBS/102-london_grammar-big_picture.flac
-25:London Grammar - Truth Is A Beautiful Thing 2CD-FLAC-2017/London_Grammar-Truth_Is_A_Beautiful_Thing-Deluxe_Edition-2CD-FLAC-2017-RiBS/202-london_grammar-different_breeds.flac
-26:London Grammar - Truth Is A Beautiful Thing 2CD-FLAC-2017/London_Grammar-Truth_Is_A_Beautiful_Thing-Deluxe_Edition-2CD-FLAC-2017-RiBS/203-london_grammar-control.flac
-27:London Grammar - Truth Is A Beautiful Thing 2CD-FLAC-2017/London_Grammar-Truth_Is_A_Beautiful_Thing-Deluxe_Edition-2CD-FLAC-2017-RiBS/103-london_grammar-wild_eyed.flac
-28:London Grammar - Truth Is A Beautiful Thing 2CD-FLAC-2017/London_Grammar-Truth_Is_A_Beautiful_Thing-Deluxe_Edition-2CD-FLAC-2017-RiBS/104-london_grammar-oh_woman_oh_man.flac
-29:London Grammar - Truth Is A Beautiful Thing 2CD-FLAC-2017/London_Grammar-Truth_Is_A_Beautiful_Thing-Deluxe_Edition-2CD-FLAC-2017-RiBS/204-london_grammar-trials_(demo).flac
-30:London Grammar - Truth Is A Beautiful Thing 2CD-FLAC-2017/London_Grammar-Truth_Is_A_Beautiful_Thing-Deluxe_Edition-2CD-FLAC-2017-RiBS/105-london_grammar-hell_to_the_liars.flac
-31:London Grammar - Truth Is A Beautiful Thing 2CD-FLAC-2017/London_Grammar-Truth_Is_A_Beautiful_Thing-Deluxe_Edition-2CD-FLAC-2017-RiBS/205-london_grammar-may_the_best_(church_mix).flac
-32:London Grammar - Truth Is A Beautiful Thing 2CD-FLAC-2017/London_Grammar-Truth_Is_A_Beautiful_Thing-Deluxe_Edition-2CD-FLAC-2017-RiBS/106-london_grammar-everyone_else.flac
-33:London Grammar - Truth Is A Beautiful Thing 2CD-FLAC-2017/London_Grammar-Truth_Is_A_Beautiful_Thing-Deluxe_Edition-2CD-FLAC-2017-RiBS/206-london_grammar-rooting_for_you_(demo).flac
-34:London Grammar - Truth Is A Beautiful Thing 2CD-FLAC-2017/London_Grammar-Truth_Is_A_Beautiful_Thing-Deluxe_Edition-2CD-FLAC-2017-RiBS/207-london_grammar-bitter_sweet_symphony_(live_at_bbc_maida_vale).flac
-35:London Grammar - Truth Is A Beautiful Thing 2CD-FLAC-2017/London_Grammar-Truth_Is_A_Beautiful_Thing-Deluxe_Edition-2CD-FLAC-2017-RiBS/107-london_grammar-non_believer.flac
-36:London Grammar - Truth Is A Beautiful Thing 2CD-FLAC-2017/London_Grammar-Truth_Is_A_Beautiful_Thing-Deluxe_Edition-2CD-FLAC-2017-RiBS/108-london_grammar-bones_of_ribbon.flac
-37:London Grammar - Truth Is A Beautiful Thing 2CD-FLAC-2017/London_Grammar-Truth_Is_A_Beautiful_Thing-Deluxe_Edition-2CD-FLAC-2017-RiBS/109-london_grammar-who_am_i.flac
-38:London Grammar - Truth Is A Beautiful Thing 2CD-FLAC-2017/London_Grammar-Truth_Is_A_Beautiful_Thing-Deluxe_Edition-2CD-FLAC-2017-RiBS/110-london_grammar-leave_the_war_with_me.flac
-39:London Grammar - Truth Is A Beautiful Thing 2CD-FLAC-2017/London_Grammar-Truth_Is_A_Beautiful_Thing-Deluxe_Edition-2CD-FLAC-2017-RiBS/111-london_grammar-truth_is_a_beautiful_thing.flac
 playlist_end

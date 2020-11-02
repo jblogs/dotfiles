@@ -3,7 +3,6 @@ set shell zsh
 set shellopts '-eu'
 set ifs "\n"
 set scrolloff 10
-set color256
 set icons
 set period 1
 set hidden off
@@ -76,8 +75,6 @@ map a push A<a-b> # after extention
 map B bulkrename
 map b $setbg $f
 
-map <c-e> down
-map <c-y> up
 map V push :!nvim<space>
 
 
