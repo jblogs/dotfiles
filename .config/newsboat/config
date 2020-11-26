@@ -50,15 +50,10 @@ text-width 80
 highlight all "YOUTUBE" color166 black bold
 highlight all "ARCH-Linux" color166 black bold
 highlight all "GIT-Repos" color166 black bold
-highlight all "redit" color166 black bold
+highlight all "Reddit" color166 black bold
 highlight all "Tech" color133 black bold
 highlight all "Home-Brew" color133 black bold
 highlight all "Hobbies" color133 black bold
-#highlight all "TV" color33 black bold
-#highlight all "News" color34 black bold
-#highlight all "Reddit" color190 black bold
-#highlight all "Alert" color124 black bold
-#highlight all "Tech" color248 black bold
 
 ##articlelist-format "%4i %f %D %?T?|%-17T| ?%t"
 

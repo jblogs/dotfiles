@@ -36,7 +36,7 @@ https://github.com/insanum.atom "~GITHUB: Eric Davis insanum"
 #Flaged Articles
 "query:Stared-Articles:flags # \"s\""
 "query:Linux Reddit:tags # \"content\" or title =~ \"\\[OC\\]\"" meta
------------------------------Redit
+----------------------------Reddit
 https://www.reddit.com/r/archlinux/new.rss reddit content
 https://www.reddit.com/r/linux/new.rss reddit content
 https://www.reddit.com/r/commandline/new.rss reddit content
