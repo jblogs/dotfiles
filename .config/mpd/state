@@ -1,13 +1,19 @@
-sw_volume: 40
+sw_volume: 68
 audio_device_state:1:pulse
 audio_device_state:1:Visualizer feed
 state: stop
-random: 1
+current: 0
+random: 0
 repeat: 0
 single: 0
-consume: 0
+consume: 1
 crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
+0:Coldplay/2019 Everyday Life/18-coldplay-cry_cry_cry.flac
+1:Coldplay/2019 Everyday Life/19-coldplay-old_friends.flac
+2:Coldplay/2019 Everyday Life/20-coldplay-bani_adam.flac
+3:Coldplay/2019 Everyday Life/21-coldplay-champion_of_the_world.flac
+4:Coldplay/2019 Everyday Life/22-coldplay-everyday_life.flac
 playlist_end

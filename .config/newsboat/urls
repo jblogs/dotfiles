@@ -1,34 +1,44 @@
--------------------------
--------YOUTUBE-----------
--------------------------
-https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA "~Luke Smith (YouTube)"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCVls1GmFKf6WlTraIb_IaJg "~DistroTube (YouTube)"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCgaugC5xeKzdAjWaDWvPzRQ "~LittleJohn (YouTube)"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCFzGyNKXPAglNq28qWYTDFA "~Kai Hendry (YouTube)"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCp1orOGJwZvjLAvckyxC4Nw "~Bosnianbill (YouTube)"
-https://videos.lukesmith.xyz/feeds/videos.xml?accountId=3 "~Luke Smith (PeerTube)"
--------
+---------------------------YOUTUBE
+--Tech----------------------------
+https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA "~Luke Smith" "(YouTube)" "tech"
+https://videos.lukesmith.xyz/feeds/videos.xml?accountId=3 "~Luke Smith (PeerTube)" "tech"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCVls1GmFKf6WlTraIb_IaJg "~distroTube" "(YouTube)" "tech"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCFzGyNKXPAglNq28qWYTDFA "~Kai Hendry" "(YouTube)" "tech"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCkf4VIqu3Acnfzuk3kRIFwA "~gotbletu" "(YouTube)" "tech"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCld68syR8Wi-GY_n4CaoJGA "~Brodie Robertson" "(YouTube)" "tech"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCp1orOGJwZvjLAvckyxC4Nw "~Bosnianbill" "(YouTube)" "tech"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCd6qylQWz49LNjE4xrKf3RA "~Prof Simon Holland" "(YouTube)" "tech"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCRE3NFNtdjR96-H4QG4U1Fg "~Hex DSL" "(YouTube)" "tech"
+--Home-Brew-----------------------
+https://www.youtube.com/feeds/videos.xml?channel_id=UCgaugC5xeKzdAjWaDWvPzRQ "~LittleJohn" "(YouTube)" "Home Brew"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC012YcFv3JKRun57ftzIWdQ "~Home Brew Network" "(YouTube)" "Home Brew"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCU0O8gwFuWOsdI8h2pOWYtw "~Don O" "(YouTube)" "Home Brew"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCEEAHI_E-4VHfrGFI3oSevg "~Barley and Hops TV" "(YouTube)" "Home Brew"
+https://www.youtube.com/feeds/videos.xml?channel_id=UClrkGLCF6WyNt5X8Rw3ew_w "~Chop and Brew" "(YouTube)" "Home Brew"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCh_h4W2VmFdo3R8g1XaXN_Q "~Northern Brewer TV" "(YouTube)" "Home Brew"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCZ62j11izA3x9RmZ2GGJ8FA "~Cutters Choice Home Brew" "(YouTube)" "Home Brew"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC-KTkwma0KXlBUIg3h_AZzw "~Doin the Most" "(YouTube)" "Home Brew"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCA-SZX2Xzl0p7pJy2fHeN-Q "~Man Made Mead" "(YouTube)" "Home Brew"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCqgnJOZ4ity3nQL_xe_hGYg "~CS Mead" "(YouTube)" "Home Brew"
+--Hobbies-------------------------
+https://www.youtube.com/feeds/videos.xml?channel_id=UCMmVPVb0BwSIOWVeDwlPocQ "~United Stand" "(YouTube)"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC3bLiTc7_UpKSl0dnYR-d3A "~HD Pink Floyd" "(YouTube)"
+------------------------Arch-Linux
 https://www.archlinux.org/feeds/news/ "tech"
 # https://wiki.archlinux.org/api.php?hidebots=1&urlversion=1&days=7&limit=50&action=feedrecentchanges&feedformat=rss "~ARCH: Arch Wiki"
 http://lukesmith.xyz/rss.xml
-https://news.ycombinator.com/rss news
-------
--------------------------
--------GIT_REPOS---------
--------------------------
+https://hexdsl.co.uk/rss.xml "~Hexdsl (Blog)"
+-------------------------GIT-Repos
 https://github.com/LukeSmithxyz.atom "~GITHUB: LukeSmithxyz"
 https://github.com/ChristianChiarulli.atom "~GITHUB: ChristianChiarulli"
 https://github.com/insanum.atom "~GITHUB: Eric Davis insanum"
--------------------------
-
+----------------------------------
+#Flaged Articles
+"query:Stared-Articles:flags # \"s\""
 "query:Linux Reddit:tags # \"content\" or title =~ \"\\[OC\\]\"" meta
-"query:Unread:unread = \"yes\"" meta
-
---------------------------
+-----------------------------Redit
 https://www.reddit.com/r/archlinux/new.rss reddit content
 https://www.reddit.com/r/linux/new.rss reddit content
-https://www.reddit.com/r/ManjaroLinux/new.rss reddit content
 https://www.reddit.com/r/commandline/new.rss reddit content
 https://www.reddit.com/r/vim/new.rss reddit content
-https://www.reddit.com/r/unixporn/new.rss reddit
 https://news.ycombinator.com/rss news
