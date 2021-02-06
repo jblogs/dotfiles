@@ -20,9 +20,11 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCZ62j11izA3x9RmZ2GGJ8FA "~C
 https://www.youtube.com/feeds/videos.xml?channel_id=UC-KTkwma0KXlBUIg3h_AZzw "~Doin the Most" "(YouTube)" "Home Brew"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCA-SZX2Xzl0p7pJy2fHeN-Q "~Man Made Mead" "(YouTube)" "Home Brew"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCqgnJOZ4ity3nQL_xe_hGYg "~CS Mead" "(YouTube)" "Home Brew"
+https://trophe.us/feed.xml
 --Hobbies-------------------------
 https://www.youtube.com/feeds/videos.xml?channel_id=UCMmVPVb0BwSIOWVeDwlPocQ "~United Stand" "(YouTube)"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC3bLiTc7_UpKSl0dnYR-d3A "~HD Pink Floyd" "(YouTube)"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCLNgS-wbHodu_lsh1k8DzBQ "~Nigel Ferage" "(YouTube)"
 ------------------------Arch-Linux
 https://www.archlinux.org/feeds/news/ "tech"
 # https://wiki.archlinux.org/api.php?hidebots=1&urlversion=1&days=7&limit=50&action=feedrecentchanges&feedformat=rss "~ARCH: Arch Wiki"
@@ -32,6 +34,12 @@ https://hexdsl.co.uk/rss.xml "~Hexdsl (Blog)"
 https://github.com/LukeSmithxyz.atom "~GITHUB: LukeSmithxyz"
 https://github.com/ChristianChiarulli.atom "~GITHUB: ChristianChiarulli"
 https://github.com/insanum.atom "~GITHUB: Eric Davis insanum"
+https://github.com/wschenk.atom "~GITHUB: Will Schenk"
+https://github.com/spech66.atom "~GITHUB: Sebastian Pech"
+https://github.com/HansUXdev.atom "~GITHUB: Bootstrap NPM"
+https://github.com/noreading.atom "~GITHUB: Noreading Bootstrap NPM"
+https://github.com/weareathlon.atom "~GITHUB: We Are ATHLON Webpack HTML"
+
 ----------------------------------
 #Flaged Articles
 "query:Stared-Articles:flags # \"s\""
@@ -42,3 +50,4 @@ https://www.reddit.com/r/linux/new.rss reddit content
 https://www.reddit.com/r/commandline/new.rss reddit content
 https://www.reddit.com/r/vim/new.rss reddit content
 https://news.ycombinator.com/rss news
+https://searx.lukesmith.xyz/search?q=Manchester%20United%20transfer%20news&categories=general&time_range=week&language=en-GB&format=rss

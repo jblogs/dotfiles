@@ -9,6 +9,7 @@ alias \
 	mv="mv -iv" \
 	rm="rm -iv" \
   mkd="mkdir -pv" \
+  tree="tree --du -h" \
 	yt="youtube-dl --add-metadata -i" \
 	yta="yt -x -f bestaudio/best" \
 	ffmpeg="ffmpeg -hide_banner"
@@ -48,7 +49,8 @@ alias \
 	f="$FILE" \
 	e="$EDITOR" \
 	v="$EDITOR" \
-	p="sudo pacman" \
+  pv="pipe-viewer" \
+  p="sudo pacman" \
 	r="ranger" \
 	l="lf" \
 	orphan="sudo pacman -Rs $(pacman -Qqtd)" \
